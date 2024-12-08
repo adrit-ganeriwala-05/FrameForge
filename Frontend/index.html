@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FrameForge</title>
+<!-- Google Font: Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="branding">
+    <h1>FrameForge</h1>
+  </div>
+  <div class="theme-toggle">
+    <button id="themeToggle" title="Toggle theme">☾</button>
+  </div>
+</header>
+
+<div class="container">
+  <!-- God of War Ragnarok -->
+  <div class="box" 
+       data-title="God of War Ragnarok" 
+       data-img="https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/aqZdSwWyy9JcQ66BxHDKrky6.jpg"
+       data-cpu-name="Intel Core i7-12700K"
+       data-cpu-link="https://example.com/cpu-gow"
+       data-cpu-price="$399"
+       data-gpu-name="NVIDIA RTX 3080"
+       data-gpu-link="https://example.com/gpu-gow"
+       data-gpu-price="$699">
+    God of War Ragnarok
+  </div>
+
+  <!-- Call of Duty Black Ops 6 -->
+  <div class="box" 
+       data-title="Call of Duty Black Ops 6" 
+       data-img="https://image.api.playstation.com/vulcan/ap/rnd/202405/3000/f058109cff9406f77285bf43417543f4676347f8113baa72.jpg"
+       data-cpu-name="AMD Ryzen 7 5800X"
+       data-cpu-link="https://example.com/cpu-cod"
+       data-cpu-price="$349"
+       data-gpu-name="NVIDIA RTX 3070"
+       data-gpu-link="https://example.com/gpu-cod"
+       data-gpu-price="$499">
+    Call of Duty Black Ops 6
+  </div>
+
+  <!-- Stalker 2 -->
+  <div class="box" 
+       data-title="Stalker 2" 
+       data-img="https://cdn1.epicgames.com/offer/602a0ef0aceb46cca62445439661d712/EGS_STALKER2HeartofChornobylDeluxe_GSCGameWorld_Bundles_S1_2560x1440-5ecbd69787e53703c1d34f2b515d6a74"
+       data-cpu-name="Intel Core i9-12900K"
+       data-cpu-link="https://example.com/cpu-stalker"
+       data-cpu-price="$599"
+       data-gpu-name="AMD Radeon RX 6800 XT"
+       data-gpu-link="https://example.com/gpu-stalker"
+       data-gpu-price="$649">
+    Stalker 2
+  </div>
+
+  <!-- Fortnite -->
+  <div class="box" 
+       data-title="Fortnite" 
+       data-img="https://gmedia.playstation.com/is/image/SIEPDC/fortnite-keyart-01-en-30nov23?$facebook$"
+       data-cpu-name="AMD Ryzen 9 5900X"
+       data-cpu-link="https://example.com/cpu-fortnite"
+       data-cpu-price="$549"
+       data-gpu-name="NVIDIA RTX 3090"
+       data-gpu-link="https://example.com/gpu-fortnite"
+       data-gpu-price="$1499">
+    Fortnite
+  </div>
+</div>
+
+<!-- Modal/Card Overlay -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-card">
+    <button class="close-button" id="closeButton">&times;</button>
+    <h2 id="modalTitle"></h2>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Footer with team members always shown -->
+<footer>
+  <div class="footer-content">Adrit Ganeriwala : Tisha Thakkar : Adwaita Boralkar</div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
