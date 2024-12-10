@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+    padding-bottom: 80px;
+    /* Ensure content not hidden behind fixed footer */
+}
+
+body.dark-mode {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+
+/* Navbar Styles */
+
+header {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: background 0.3s ease;
+}
+
+body.dark-mode header {
+    background: #2c2c2c;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+header .branding h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+header .branding {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+header .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    color: #333;
+}
+
+body.dark-mode header button {
+    color: #eee;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    text-align: center;
+    padding: 20px;
+    height: 300px;
+}
+
+.box:hover {
+    transform: scale(1.03);
+}
+
+body.dark-mode .box {
+    background: #2c2c2c;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+
+/* Modal (card) overlay styles */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-card {
+    background: #fff;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .modal-card {
+    background: #2c2c2c;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.modal-card h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.modal-card p {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.modal-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    color: #333;
+}
+
+body.dark-mode .close-button {
+    color: #fff;
+}
+
+.modal-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.dark-mode .modal-card a {
+    color: #5c9fff;
+}
+
+.modal-card a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Footer Styles */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #f7f7f7;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    transition: background 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+body.dark-mode footer {
+    background: #2c2c2c;
+    border-top: 1px solid #444;
+    color: #eee;
+}
+
+.footer-content {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+/* Loading spinner */
+
+.spinner {
+    display: none;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007BFF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
