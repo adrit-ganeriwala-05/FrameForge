@@ -24,3 +24,13 @@ Build Your Dream PC: Save time and effort while ensuring optimal performance for
 - Transparency: Compare prices from multiple trusted sources.
 
 FrameForge is more than just an application; it’s a tool to empower gamers and PC enthusiasts. Whether you're new to PC building or a seasoned gamer, FrameForge ensures you get the best performance for your budget. 🎮💻
+
+### How to run the code
+To run the Backend:
+Run mvn clean install.
+Use mvn spring-boot:run to start the Spring Boot application.
+
+To run the Frontend:
+The frontend needs to run using the Live Server extension on VS Code as the backend is limited to accept requests from port 5500 due to CORS.
+Install the Live Server extension on VS Code by Ritwick Dey and, while on index.html, click on the "Go Live" option on the bottom left.
+
